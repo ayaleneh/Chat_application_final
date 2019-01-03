@@ -202,16 +202,16 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#myPage">HOME</a></li>
-          <li><a href="#tour">LOGIN</a></li>
-          <li><a href="#tour">SIGNUP</a></li>
-          <li><a href="#tour">ABOUT_US</a></li>
+          <li><a href="#login_signup">LOGIN</a></li>
+          <li><a href="#login_signup">SIGNUP</a></li>
+          <li><a href="#main">ABOUT_US</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- Container (LOGIN AND SIGN UP Section) -->
-  <div id="tour" class="bg-1">
+  <div id="login_signup" class="bg-1">
     <div class="container">
       <h1 class="text-center">CHAT APPLICATION</h1>
       <h2>
@@ -239,7 +239,7 @@
   <!-- Container (The Band Section) -->
   <div id="band" class="container text-center">
     <h3 style="text-decoration: underline">Code Partner Chat Aplication</h3>
-    <p><em>We love coding!</em></p>
+    <p id="main"><em>We love coding!</em></p>
     <p>We have created a simple chat web application basically our project cover socket.io concept How
       to send message in real time to any member of public or private room in real world what we call 
       channel and private message our application mainly cover the public channel and private message after
@@ -269,44 +269,6 @@
       </div>
     </div>
   </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-            <button type="submit" class="btn btn-block">Pay
-              <span class="glyphicon glyphicon-ok"></span>
-            </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
   <!-- Container (Contact Section) -->
   <div id="contact" class="container">
     <h3 class="text-center">Contact</h3>
@@ -315,8 +277,8 @@
     <div class="row">
       <div class="col-md-4">
         <p>Fan? Drop a note.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-        <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span>Maryland, US</p>
+        <p><span class="glyphicon glyphicon-phone"></span>Phone: +2404632079</p>
         <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
       </div>
       <div class="col-md-8">
@@ -337,39 +299,12 @@
         </div>
       </div>
     </div>
-    <br>
-    <h3 class="text-center">From The Blog</h3>
-    <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
-      <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
-      <li><a data-toggle="tab" href="#menu2">Peter</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-        <h2>Mike Ross, Manager</h2>
-        <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
-      </div>
-      <div id="menu1" class="tab-pane fade">
-        <h2>Chandler Bing, Guitarist</h2>
-        <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
-      </div>
-      <div id="menu2" class="tab-pane fade">
-        <h2>Peter Griffin, Bass player</h2>
-        <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
-      </div>
-    </div>
   </div>
-
-  <!-- Image of location/map -->
-  <img src="map.jpg" class="img-responsive" style="width:100%">
-
   <!-- Footer -->
   <footer class="text-center">
     <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a><br><br>
-    <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
   </footer>
 
   <script>
