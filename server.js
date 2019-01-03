@@ -14,7 +14,8 @@ var users = {}//used to hold people that is currently connected to our chat appl
 require('dotenv').config()
 
 app.use(express.static(__dirname + '/styling'));
-
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/image'));
 const mongourl = `mongodb://${process.env.USER_NAME}:${process.env.PASSWORD}@ds139934.mlab.com:39934/chat_application`
 mongoose.connect(mongourl, {
   useNewUrlParser: true
@@ -88,6 +89,17 @@ function updateNickname() {
   io.sockets.emit('username',Object.keys(users))
 }
 
+//disconnect
+socket.on('disconnect', function (data) {
+  if (!socket.nickname) {
+    return
+  } else {
+    delete users[socket.nickname]
+    //nickname.splice(nickname.indexOf(socket.nickname), 1)
+    updateNickname()
+  }
+})
+//typing_user
 //send message 
 socket.on('send message', function (data,callback) {
   var msg=data.trim()
