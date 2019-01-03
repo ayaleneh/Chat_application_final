@@ -58,6 +58,18 @@ server.listen(port, function () {
 
 
 io.sockets.on('connection', function (socket) {
+
+
+  // loading old message
+  Chat.find({},function(error,docs){
+    if(error){
+      throw error
+    }
+    else{
+      console.log("sending old message")
+      socket.emit('load old msgs',docs)
+    }
+  })
 //join
 
 socket.on('new_user', function (data, callback) {
