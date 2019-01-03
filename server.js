@@ -92,8 +92,8 @@ function updateNickname() {
 socket.on('send message', function (data,callback) {
   var msg=data.trim()
 
-  if(msg.substr(0,3)==='/w '){//whisper method
-    msg=msg.substr(3)
+  if(msg.substr(0,2)==='/ '){//whisper method
+    msg=msg.substr(2)
     console.log("right here")
     var ind=msg.indexOf(' ')
     console.log("the index is "+ind)
@@ -132,5 +132,6 @@ socket.on('send message', function (data,callback) {
   
   }
   //socket.broadcast.emit()//exept me
+
 })
 })
